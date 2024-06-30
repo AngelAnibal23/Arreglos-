@@ -6,34 +6,38 @@ Programa que lee n números, encuentra el mayor y el menor, y cuenta sus repetici
 #include <iostream>
 using namespace std; 
 
-int repeticiones(int arreglo[], int tam, int numero){
-	int cont=0;
+
+int repeticiones(int arreglo[], int tamano, int x){
+	int contador=0;
 	
-	for(int i=0; i<tam ; i++){
-		if(numero==arreglo[i]){
-			cont++;
+	for(int i=0; i<tamano ; i++){
+		
+		// x es el numero mayor o menor. 
+		
+		if(x==arreglo[i]){
+			contador++;
 		}
 	}
 	
-	return cont; 
+	return contador; 
 }
 
 int main(){
-	int array[40], n, cont=0, repe_men, repe_may; 
+	int array[40], cantidad_elementos, repeticiones_menores, repeticiones_mayores; 
 	
 	cout<<"Digite la cantidad de elementos que tendra el arreglo: "; 
-	cin>>n; 
+	cin>>cantidad_elementos; 
 	
-	for(int i=0; i<n ; i++){
+	for(int i=0; i<cantidad_elementos ; i++){
 		cout<<"Digite el elemento: "; 
 		cin>>array[i]; 	
 	}
 	
-	int tam = sizeof(array)/ sizeof(array[0]); 
+	int tamano = sizeof(array)/ sizeof(array[0]); 
 	
 	int mayor=array[0], menor=array[0]; 
 	
-	for(int i=0; i<n; i++){
+	for(int i=0; i<cantidad_elementos; i++){
  		if(array[i]>=mayor){
  			mayor=array[i]; 
  		}
@@ -43,12 +47,12 @@ int main(){
  		}
 	}
 	
-	repe_may = repeticiones(array, tam, mayor); 
-	repe_men = repeticiones(array, tam, menor); 
+	repeticiones_mayores = repeticiones(array, tamano, mayor); 
+	repeticiones_menores = repeticiones(array, tamano, menor); 
 	
 	
-	cout<<"\nEl elemento mayor es: "<<mayor<<". Se repite: "<<repe_may<<" veces."<<endl; 
-	cout<<"El elemento menor es: "<<menor<<". Se repite: "<<repe_men<<" veces."<<endl; 
+	cout<<"\nEl elemento mayor es: "<<mayor<<". Se repite: "<<repeticiones_mayores<<" veces."<<endl; 
+	cout<<"El elemento menor es: "<<menor<<". Se repite: "<<repeticiones_menores<<" veces."<<endl; 
 	
 	return 0; 
 }
