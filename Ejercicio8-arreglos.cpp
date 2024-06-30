@@ -9,9 +9,15 @@ Comprobar si un número de 10 cifras es capicúa usando un vector.
 
 using namespace std; 
 int main(){
-	int capicua[10]={1,2,3,4,5,5,4,3,2,1}, cont=0; 
+	int capicua[10], cont=0; 
 	
-
+	cout<<"Ingrese 10 numeros para comprobar si es capicua o no: "<<endl; 
+	for(int i=0; i<10; i++){
+		cout<<"Ingrese el elemento: "; 
+		cin>>capicua[i]; 
+	}
+	
+	cout<<endl; 
 	cout<<"El numero es: ";
 	for(int j=0; j<10; j++){
 		cout<<capicua[j]; 
