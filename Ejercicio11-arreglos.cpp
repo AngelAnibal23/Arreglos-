@@ -11,6 +11,12 @@ int main(){
 	cout<<"Digite la cantidad de elementos: ";
 	cin>>n; 
 	
+	if(n<0){
+		cout<<"El programa termino. "; 
+		
+		return 1; 
+	}
+	
 	for(int i=0; i<n; i++){
 		cout<<"Digite el elemento: "; 
 		cin>>numeros[i]; 
