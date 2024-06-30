@@ -5,12 +5,17 @@
 using namespace std;
 
 int main() {
+	
     const int n = 30;
     double numeros[n], suma = 0, aux;
     double moda, mediana, media;
     int contador1 = 0, contador2 = 0;
     
+    
+    //generando la semilla de numeros aleatorios.
+    
     srand(time(0));
+    
     cout << "Los numeros generados son: " << endl;
     for (int i = 0; i < n; i++) {
         numeros[i] = 100 + rand() % (1000 + 1 - 100);
@@ -22,6 +27,8 @@ int main() {
         suma += numeros[i];
     }
     media = suma / n;
+    
+    //ordenando el arreglo con el metodo burbuja
     
     for (int i = 0; i < n - 1; i++) {
         for (int k = 0; k < n - 1 - i; k++) {
@@ -38,7 +45,10 @@ int main() {
     }
     cout << endl;
     
-    mediana = (numeros[14] + numeros[15]) / 2.0;
+    mediana = (numeros[14] + numeros[15]) / 2;
+    
+    
+   //bulce para hallar la moda
     
     for (int j = 0; j < n; j++) {
         contador1 = 0;
@@ -52,10 +62,10 @@ int main() {
             moda = numeros[j];
         }
     }
-    cout<< endl;
-    cout<< "Mediana: " << mediana << endl;
-    cout<< "Media: " << media << endl;
-    cout<< "Moda: " << moda << endl;
+    cout << endl;
+    cout << "Mediana: " << mediana << endl;
+    cout << "Media: " << media << endl;
+    cout << "Moda: " << moda << endl;
     
     return 0;
 }
