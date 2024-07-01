@@ -7,30 +7,38 @@ Rotar las componentes de un vector una posición hacia la derecha.
 using namespace std; 
 
 int main(){								
-	int	tam, numeros[]={1,2,3,4,5,6,7,8,9,10};			
+	int	n; 			
 	
-	tam=sizeof(numeros)/sizeof(numeros[0]); 
+	cout<<"Digite la cantidad de elementos que tendra el arreglo: "; 
+	cin>>n; 
 	
+	int numeros[n]; 
+	
+	for(int i=0; i<n; i++){
+		cout<<"Digite el elemento: ";
+		cin>>numeros[i];  
+	}
+	
+	cout<<"\n"; 
 	cout<<"Elementos del arreglo antes del movimiento: "<<endl; 
-	for(int i=0; i<tam; i++){
+	for(int i=0; i<n; i++){
 		cout<<numeros[i]<<" "; 
 	}
 	cout<<"\n"; 
-	int numeros2[tam]; 
+	int numeros2[n]; 
 	
-	for(int i=0; i<tam; i++){
-		
+	for(int i=0; i<n; i++){
 		
 		numeros2[i+1]=numeros[i]; 
 		
-		if(i==tam-1){
-  		   numeros2[0]=numeros[tam-1];	  
+		if(i==n-1){
+  		   numeros2[0]=numeros[n-1];	  
 		}	
 	}
 	
 	cout<<"\n"; 
 	cout<<"Elementos del arreglo despues del movimiento: "<<endl; 
-	for(int i=0; i<tam; i++){
+	for(int i=0; i<n; i++){
 		cout<<numeros2[i]<<" "; 
 	}
 	 
