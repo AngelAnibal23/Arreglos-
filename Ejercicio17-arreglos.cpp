@@ -8,6 +8,7 @@ Escriba una función que dado el nombre completo de una persona y un apellido, co
 
 using namespace std;
 
+//Creamos una funcion que retornara un valor booleando
 bool comprobarApellido(char nombreCompleto[],char apellido[]) {
     int tamNombre = strlen(nombreCompleto);
     int tamApellido = strlen(apellido);
@@ -39,6 +40,8 @@ int main() {
     cout << "Digite el apellido a comprobar: " << endl; 
     cin.getline(apellido, 30);
     
+    
+    //Condicional que solo necesita el valor de la funcion 
     if (comprobarApellido(nombreCompleto, apellido)) {
         cout << "El apellido pertenece a la persona." << endl;
     } else {
