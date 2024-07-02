@@ -9,11 +9,9 @@ Convertir palabras a mayusculas iniciales: "caceres patrimonio de la humanidad" 
 
 using namespace std; 
 
-int main(){
-	char cadena[]="caceres patrimonio de la humanidad"; 
+void convertirMayusculas(char cadena[]){
 	bool mayuscula=true; 
 		
-	
 	for(int i=0; cadena[i] != '\0'; i++){
 		if(cadena[i]== ' '){
 			mayuscula=true; 
@@ -23,6 +21,14 @@ int main(){
 			mayuscula = false;
 		}
 	}
+}
+
+
+int main(){
+	char cadena[]="caceres patrimonio de la humanidad"; 
+	bool mayuscula=true; 
+		
+	convertirMayusculas(cadena); 
 	
 	cout<<cadena<<endl; 	
 
