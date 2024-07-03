@@ -23,7 +23,14 @@ int main(){
 		}
 	}
 	cout<<endl; 
-	cout<<"La letra elegida: "<<letra<<". Se repite : "<<cont<<" veces. "<<endl; 
+	
+	if(cont==1){
+	cout<<"La letra elegida: "<<letra<<". Se repite : "<<cont<<" vez "<<endl; 
+	}
+	else{
+		cout<<"La letra elegida: "<<letra<<". Se repite : "<<cont<<" veces "<<endl; 
+	}
+	
 	
 	return 0; 
 }
