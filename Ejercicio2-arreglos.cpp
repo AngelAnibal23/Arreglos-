@@ -15,6 +15,8 @@ int main(){
 	cin.getline(cadena,50); 
 	
 	cout<<endl; 
+	cout<<"Se muestra el eco generado por el problema: "<<endl; 
+	cout<<endl; 
 	for(int i=0; cadena[i] != '\0'; i++){
 		if(cadena[i]==' '){
 			cout<<endl; 
